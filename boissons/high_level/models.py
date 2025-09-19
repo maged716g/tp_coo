@@ -4,9 +4,9 @@ from django.db import models
 class QuantiteMatierePremiere(models.Model):
 	quantite = models.IntegerField()
 	matiere_premiere = models.ForeignKey(MatierePremiere, on_delete=models.PROTECT,)
-	def __init_(self, UtilisationMatierePremiere: "UtilisationMatierePremiere", ApprovisionnemoentMatierePremiere: "ApprovisionnemoentMatierePremiere"): 
-		self.UtilisationMatierePremiere = UtilisationMatierePremiere 	
-		self.ApprovisionnemoentMatierePremiere = ApprovisionnemoentMatierePremiere 
+	# def __init_(self, UtilisationMatierePremiere: "UtilisationMatierePremiere", ApprovisionnemoentMatierePremiere: "ApprovisionnemoentMatierePremiere"): 
+		# self.UtilisationMatierePremiere = UtilisationMatierePremiere 	
+		# self.ApprovisionnemoentMatierePremiere = ApprovisionnemoentMatierePremiere 
 
 # class UtilisationMatierePremiere():
 	# pass
@@ -30,11 +30,11 @@ class QuantiteMatierePremiere(models.Model):
 	# def __init_(self, Metier): 
 		# self.Metier = Metier
 	
-# class MatierePremiere():
+class MatierePremiere():
 	# pass
-	# nom = models.CharField(max_length=100)
-	# stock = models.IntegerField()
-	# emprise = models.CharField(max_length=100)
+	nom = models.CharField(max_length=100)
+	tock = models.IntegerField()
+	emprise = models.CharField(max_length=100)
 	
 # #class Machine():
 
@@ -55,7 +55,7 @@ class QuantiteMatierePremiere(models.Model):
 
 # #class Localisation():
 
-class Meta:
-abstract = True
+#class Meta:
+#abstract = True
 
 # if __name__ == "__main__":
